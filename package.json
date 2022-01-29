@@ -1,0 +1,23 @@
+{
+  "name": "resturent",
+  "version": "1.0.0",
+  "description": "this is app to do order on restuent web  application",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanad-hamad/resturent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanad-hamad/resturent/issues"
+  },
+  "homepage": "https://github.com/sanad-hamad/resturent#readme",
+  "dependencies": {
+    "jsdoc": "^3.6.10"
+  }
+}
