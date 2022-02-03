@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: receipt.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,35 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: receipt.js</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * 
+ * @param {string} name  the custmoer name 
+ * @param {string} ordername the order name 
+ * @param {double} price -the price of total meale 
+ * @param {Date} currntDate -the data of order 
+ * @param {boolean} speicalMeal this order type 
+ */
+export const receiptDes=(name,ordername,price,currntDate,speicalMeal)=>{
+    if(speicalMeal)
+    {
+         price+=5;
+         
+    }
     
+    console.log(`welcome ${name} you ordered the meal ${ordername} at ${currntDate} the total price is ${price }`)
 
-
-
-
-
+}</code></pre>
+        </article>
+    </section>
 
 
 
