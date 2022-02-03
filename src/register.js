@@ -2,39 +2,53 @@
 const ValidateSignupForm=function()
 {
     let RegisterForm = $("#register");
+    
 
-      var btn = document.getElementById('submit');
-
-   
-   const fun=()=>
-   { 
-       let firstName=$("#firstName").val();
-       let lastName=$("#email").val();
-
-   }
   if(RegisterForm.length)
   {
+      
+    // check valid email 
+     $.validator.addMethod("customemail", 
+    function(value, element) {
+        return /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value);
+    }, 
+    "Sorry, I've enabled very strict email validation"
+);
+
+// this is to password 
+/**
+ * ^               // start of input 
+(?=.*?[A-Z])    // Lookahead to make sure there is at least one upper case letter
+(?=.*?[a-z])    // Lookahead to make sure there is at least one lower case letter
+(?=.*?[0-9])    // Lookahead to make sure there is at least one number
+[A-Za-z0-9]{6,} // Make sure there are at least 6 characters of [A-Za-z0-9]
+ */
+$.validator.addMethod("loginRegex", function(value, element) {
+    return this.optional(element) ||  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[A-Za-z0-9]{8,}$/.test(value);
+}, "Username must contain only letters, numbers, or dashes.");
+
+  
+ 
      RegisterForm.validate({
          rules:{
-             /**
-              * fisrt Name mandatory 
-              * @param {string}
-              */
+            
            firstName:{
                required:true,
-               maxlength:32
+               maxlength:32,
+               minlength:4,
+               
            },
-           /**
-            * @param {email} must contain email desain 
-            */
+           
            email:{
 
                required:true,
-               email:true
+               email:true,
+               customemail:true
+
+
+              
            },
-           /**
-            * @param {string} just you can add digit number 
-            */
+           
            phone:{
                required:true,
                minlength:10,
@@ -47,13 +61,17 @@ const ValidateSignupForm=function()
            password:{
                required:true,
                minlength:8,
-               alphanumeric:true
+               loginRegex:true
+               
            }
 
          },
+
+         
          messages:{
              firstName:{
-                 required:'firstName is mandatory'
+                 required:'firstName is mandatory',
+                 isvalid:"enter valid name"
              },
              email:{
                  required:'enter email like sanad@anything.com'
@@ -64,9 +82,15 @@ const ValidateSignupForm=function()
 
          },
 
+         
+
         
          
      })
+
+    
+
+    
 
     
   }
@@ -80,19 +104,33 @@ $(function(){
     /**
      * this function to validate the form for signup 
      */
+     console.log("this work correct");
 
-     $("#signup").onclick=function(){
+     let x =$("#add-user");
+     console.log(x)
 
-       
+     x.onclick=function()
+     {
+         console.log(x);
      }
-    ValidateSignupForm();
+
+        // this is to hide the summary and show signup content 
+       $("#add-user").click(function(){
+
+        $("#summary").css('display','none');
+        $("#container").css('display','block');
+       })
+        
+
+        
+           
+             // this for validation form using jquery 
+        ValidateSignupForm();
+    
+
    
-    console.log(ValidateSignupForm.data.firstName)
-    console.log(ValidateSignupForm.data.phone);
-
-    console.log(pass,firstName)
-    btn.addEventListener('click', fun);
-
+   
+    
   
 
 })

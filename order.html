@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <div class="order">
+    <div class="order" id="order">
         <h1>make your oderder here</h1>
         <form action="" id="order-form">
             <input type="text" name="ordername" placeholder="Oerder Name" id="orderName">
             <select name="meale" id="meale">
-                <option value="{price:10,name:burger}">burger</option>
-                <option value="{price:10,name:burger}">potato</option>
-                <option value="{price:10,name:burger}">KFC</option>
+                <option value='{"price":10,"name":"burger"}'>burger</option>
+                <option value='{"price":10,"name":"potato"}'>potato</option>
+                <option value='{"price":10,"name":"KFC"}'>KFC</option>
             </select>
             <textarea name="descreption" id="" cols="30" rows="10" placeholder="enter your extra note here ">
 
@@ -27,7 +27,17 @@
 
     </div>
 
+
+
+    <div id="recipt">
+
+        here
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="module" src="./src/order.js"></script>
+    <script src="./src/receipt.js" type="module"></script>
 
 
 </body>
