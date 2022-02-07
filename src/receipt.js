@@ -1,19 +1,23 @@
 /**
- * 
- * @param {string} name  the custmoer name 
- * @param {string} ordername the order name 
- * @param {double} price -the price of total meale 
- * @param {Date} currntDate -the data of order 
+ *
+ * @param {string} name  the custmoer name
+ * @param {string} ordername the order name
+ * @param {double} price -the price of total meale
+ * @param {Date} currntDate -the data of order
  * @param {boolean} speicalMeal this order type you can get the val ussing checkbox
  */
-  export default function receiptDes(name,ordername,price,currntDate,speicalMeal){
-    if(speicalMeal)
-    {
-         price+=5;
+export default function receiptDes(
+  name,
+  ordername,
+  price,
+  currntDate,
+  speicalMeal
+) {
+  if (speicalMeal) {
+    price += 5;
+  }
 
-    }
-    
-     var recipt=`<p>
+  var recipt = `<p>
      
                      Customer name is: ${name}
                      <br>
@@ -31,13 +35,5 @@
      
                  </p>`;
 
-
-                 
-         document.getElementById("recipt").innerHTML=recipt;
-
+  document.getElementById("recipt").innerHTML = recipt;
 }
-
-
-// const {firstName,price,ordername,datanow,specaial}=JSON.parse(sessionStorage.getItem("Dataset"));
-
-

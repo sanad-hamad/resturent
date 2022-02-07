@@ -1,82 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restrunt</title>
-    <link rel="stylesheet" href="CSS/main.css">
-
+    <link rel="stylesheet" href="CSS/main.css" />
 
     <!-- # jquer plagin for validation -->
+  </head>
 
-
-
-</head>
-
-<body>
-
+  <body>
     <div class="navbar">
+      <h2 style="color: wheat; font-family: 'Courier New', Courier, monospace">
+        Brand <span style="color: red">Name</span>
+      </h2>
 
-        <h2 style="color: wheat;font-family: 'Courier New', Courier, monospace;">Brand <span
-                style="color: red;">Name</span> </h2>
-
-        <div class="add-user" style="float: right;">
-            <button style="margin-top: -50px; border: none;" id="add-user">add user</button>
-
-        </div>
+      <div class="add-user" style="float: right">
+        <button style="margin-top: -50px; border: none" id="add-user">
+          add user
+        </button>
+      </div>
     </div>
 
-
     <div class="summery-rest" id="summary">
-        <img src="IMAGE/about.jpg" alt="">
-        <div class="about">
-            <h2>Restruent Servius</h2>
-            <div>
-
-                <p>Service options <span> Dine-in · Takeaway</span></p>
-                <p>Address:<span>Tira, Israel</span></p>
-                <p>Hours: <span> Opens soon 12PM</span></p>
-                <p>Phone: +972 1-700-501-078</p>
-                <p>
-                    Descreption: <span>
-                        trhis is the descreption about your resternt writ any thing you help to defintion your rest
-                    </span>
-                </p>
-
-
-            </div>
-
+      <img src="IMAGE/about.jpg" alt="" />
+      <div class="about">
+        <h2>Restruent Servius</h2>
+        <div>
+          <p>Service options <span> Dine-in · Takeaway</span></p>
+          <p>Address:<span>Tira, Israel</span></p>
+          <p>Hours: <span> Opens soon 12PM</span></p>
+          <p>Phone: +972 1-700-501-078</p>
+          <p>
+            Descreption:
+            <span>
+              trhis is the descreption about your resternt writ any thing you
+              help to defintion your rest
+            </span>
+          </p>
         </div>
-
+      </div>
     </div>
 
     <div id="container">
-        <h1>Signup a new user</h1>
-        <form action="order.html" method="get" class="form-signup" id="register">
-            <input type="text" name="firstName" placeholder="enter username" value="">
-            <input type="email" name="email" placeholder="sanad@gmail.com">
-            <input type="text" name="phone" placeholder="phone" maxlength="10">
-            <input type="password" name="password"
-                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" minlength="8">
-            <button type="submit" id="signup">sigup</button>
-        </form>
+      <h1>Signup a new user</h1>
+      <form action="order.html" method="get" class="form-signup" id="register">
+        <input
+          type="text"
+          name="firstName"
+          placeholder="enter username"
+          value=""
+        />
+        <input type="email" name="email" placeholder="sanad@gmail.com" />
+        <input type="text" name="phone" placeholder="phone" maxlength="10" />
+        <input
+          type="password"
+          name="password"
+          placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+          minlength="8"
+        />
+        <button type="submit" id="signup">sigup</button>
+      </form>
     </div>
-
-
-
-
-
 
     <!-- # invoke jquery using cdn  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 
     <script src="./src/register.js"></script>
-
-</body>
-
+  </body>
 </html>
